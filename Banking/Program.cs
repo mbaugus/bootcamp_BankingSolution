@@ -57,38 +57,45 @@ namespace Banking
             // WriteLine(acct2.ToPrint());
             // WriteLine(savingsAcct.ToPrint());
 
-            Checking mychecking = new Checking();
-            mychecking.Description = "Mike Bob's Checking Account 1";
-            Customer c = new Customer(10, "Mike Bob");
-            mychecking.Owner = c;
-            mychecking.Deposit(1000.00m);
+            //Checking mychecking = new Checking();
+            //mychecking.Description = "Mike Bob's Checking Account 1";
+            //Customer c = new Customer(10, "Mike Bob");
+            //mychecking.Owner = c;
+            //mychecking.Deposit(1000.00m);
 
-            Checking mychecking2 = new Checking();
-            mychecking2.Description = "Mike Bob's Checking Account 2";
-            mychecking2.Owner = c;
-            mychecking2.Deposit(500.00m);
+            //Checking mychecking2 = new Checking();
+            //mychecking2.Description = "Mike Bob's Checking Account 2";
+            //mychecking2.Owner = c;
+            //mychecking2.Deposit(500.00m);
 
-            Savings mysaving = new Savings();
-            mysaving.Description = "Mike Bob's Savings Account 1";
-            mysaving.Owner = c;
-            mysaving.Deposit(1500.00m);
+            //Savings mysaving = new Savings();
+            //mysaving.Description = "Mike Bob's Savings Account 1";
+            //mysaving.Owner = c;
+            //mysaving.Deposit(1500.00m);
 
-            Account[] accounts = { mychecking, mychecking2, mysaving };
+            //Account[] accounts = { mychecking, mychecking2, mysaving };
 
 
-            for(int i = 0; i < 50; i++)
-            {
-                mysaving.Deposit((decimal)i * 50);
-            }
-            foreach (var i in accounts)
-            {
-                
-               // WriteLine(i.ToPrint());
-            }
+            //for(int i = 0; i < 50; i++)
+            //{
+            //    mysaving.Deposit((decimal)i * 50);
+            //}
+            //foreach (var i in accounts)
+            //{
 
-            // mychecking.WithDraw(500.00m, 5);
-            //WriteLine(mychecking.ToPrint());
-            mysaving.ShowHistory();
+            //   // WriteLine(i.ToPrint());
+            //}
+
+            //// mychecking.WithDraw(500.00m, 5);
+            ////WriteLine(mychecking.ToPrint());
+            //mysaving.ShowHistory();
+
+            
+            Account account = new Account();
+            account.Description = "Its an investment not account";
+            Investment i = new Investment(account);
+            i.Deposit(500.00m);
+            i.ShowHistory();
         }
     }
 }
